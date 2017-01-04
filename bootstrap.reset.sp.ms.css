@@ -471,6 +471,7 @@ ul.three-up > li:nth-child(3n+1) {
 #s4-ribbonrow *,
 .ms-csrlistview-controldiv *,
 #idStorefrontLayoutRoot *,
+.ms-dialog .ms-cui-menu *,
 .js-callout-mainElement *,
 .ms-webpart-chrome-title *,
 .ms-dlgTitle *,
@@ -480,7 +481,8 @@ ul.three-up > li:nth-child(3n+1) {
     -ms-box-sizing: content-box;
     box-sizing: content-box;
 }
-/* Exception! */
+/* Exception for callout and tab in dialog */
+#s4-ribbonrow [role=tablist] [role=tab] .ms-cui-tt-span,
 .js-callout-mainElement .js-callout-location {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
