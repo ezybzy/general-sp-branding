@@ -440,7 +440,7 @@ ul.three-up > li:nth-child(3n+1) {
         padding: 0 5px 0 5px; 
     }
     .searchbox { 
-        /*float: none;*/ 
+        float: none;
     }     
 }
 /* Button handler */
@@ -495,7 +495,6 @@ ul.three-up > li:nth-child(3n+1) {
     text-decoration: none;
 }
 
-
 .ms-webpart-chrome-title .ms-webpart-titleText,
 .ms-dlgTitle #dialogTitleSpan {
     margin-bottom: 0;
@@ -507,7 +506,9 @@ ul.three-up > li:nth-child(3n+1) {
 
 /* Add more space between old .ms-toolbar table cell */
 .ms-toolbar .ms-separator {
-    padding: 0 5px;
+    padding: 0 10px;
+    /*width: 20px;*/
+    visibility: hidden;
 }
 /* Left navigation */
 .ms-core-listMenu-verticalBox li.static > ul.static > li.static.ms-navedit-dropNode .ms-navedit-linkCell .ms-core-listMenu-item {
@@ -531,5 +532,4 @@ table.ms-picker-table td.ms-picker-dayselected {
 /* Image rendition fixing */
 .ms-imagecrop img.ms-imagecrop-ghost {
     width: 100%;
-
 }
