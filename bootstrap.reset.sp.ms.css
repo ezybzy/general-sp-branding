@@ -482,7 +482,7 @@ ul.three-up > li:nth-child(3n+1) {
     box-sizing: content-box;
 }
 /* Exception for callout and tab in dialog */
-#s4-ribbonrow [role=tablist] [role=tab] .ms-cui-tt-span,
+.ms-dialog #s4-ribbonrow [role=tablist] [role=tab] .ms-cui-tt-span,
 .js-callout-mainElement .js-callout-location {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -498,6 +498,14 @@ ul.three-up > li:nth-child(3n+1) {
 .ms-dlgTitle #dialogTitleSpan {
     margin-bottom: 0;
     margin-top: 0;
+}
+.ms-toolbar .ms-separator {
+    padding: 0 5px;
+}
+
+.ms-core-listMenu-verticalBox li.static > ul.static > li.static.ms-navedit-dropNode .ms-navedit-linkCell .ms-core-listMenu-item {
+    /*padding-left: 40px;*/
+    padding-left: 20px;
 }
 
 /* Calendar fixing */
