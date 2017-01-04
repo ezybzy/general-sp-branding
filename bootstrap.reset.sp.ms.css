@@ -1,5 +1,5 @@
 ﻿/* Source: https://code.msdn.microsoft.com/Sharepoint-Responsive-Page-08fe5c2f/sourcecode?fileId=143502&pathId=1710470633 */
-﻿/*bootstrap resets for SharePoint*/ 
+/*bootstrap resets for SharePoint*/ 
 *, *:before, *:after { 
     -webkit-box-sizing: content-box; /*border-box causes many issues with SP*/ 
     -moz-box-sizing: content-box;
@@ -494,18 +494,30 @@ ul.three-up > li:nth-child(3n+1) {
 .ms-csrlistview-controldiv a:hover {
     text-decoration: none;
 }
+
+
 .ms-webpart-chrome-title .ms-webpart-titleText,
 .ms-dlgTitle #dialogTitleSpan {
     margin-bottom: 0;
     margin-top: 0;
 }
+.ms-dlgTitle .ms-dlgTitleText {
+    line-height: 1.5em;
+}
+
+/* Add more space between old .ms-toolbar table cell */
 .ms-toolbar .ms-separator {
     padding: 0 5px;
 }
-
+/* Left navigation */
 .ms-core-listMenu-verticalBox li.static > ul.static > li.static.ms-navedit-dropNode .ms-navedit-linkCell .ms-core-listMenu-item {
     /*padding-left: 40px;*/
     padding-left: 20px;
+}
+
+/* Term store fixing */
+#TermStoreTreeArea .pager {
+    margin: 0;
 }
 
 /* Calendar fixing */
