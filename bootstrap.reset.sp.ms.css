@@ -450,6 +450,7 @@ ul.three-up > li:nth-child(3n+1) {
 #suiteBar *,
 #s4-ribbonrow *,
 .ms-csrlistview-controldiv *,
+.ms-bottompaging *,
 #idStorefrontLayoutRoot *,
 .ms-dialog .ms-cui-menu *,
 .js-callout-mainElement *,
