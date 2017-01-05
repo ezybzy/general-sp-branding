@@ -3,11 +3,13 @@
 *, *:before, *:after { 
     -webkit-box-sizing: content-box; /*border-box causes many issues with SP*/ 
     -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
     box-sizing: content-box;
 } 
 * [class^="span"], * [class^="span"]:before, * [class^="span"]:after { 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     box-sizing: border-box;
 } 
 img { 
@@ -349,7 +351,8 @@ ul.three-up > li:nth-child(3n+1) {
 .ms-dialog .ms-descriptiontext { 
     min-width: 150px; 
 } 
-.ms-dialog input[type="radio"], .ms-dialog input[type="checkbox"] { 
+/*.ms-dialog*/
+ input[type="radio"], .ms-dialog input[type="checkbox"] { 
     margin: 4px 4px 0; 
 } 
 .ms-dialog label { 
@@ -443,29 +446,6 @@ ul.three-up > li:nth-child(3n+1) {
         float: none;
     }     
 }
-/* Button handler */
-/*#ms-help > a[title='Help'] > span,
-.ms-siteactions-normal > .ms-core-menu-root,
-.ms-cui-topBar2,
-#ribbonBox [mscui\:controltype='DropDown'] .ms-cui-dd-text, 
-#ribbonBox [mscui\:controltype='DropDown'] .ms-cui-dd-arrow-button,
-#ms-designbuilder-cuicontainer .ms-cui-dd-text,
-#ms-designbuilder-cuicontainer .ms-cui-dd-arrow-button,
-.js-callout-closeButton,
-.js-webpart-menuCell .ms-webpart-menuLink,
-.ms-cui-ctl > a,
-.ms-cui-ctl-medium,
-.ms-dlgCloseBtn > span,
-.ms-qatbutton a > span,
-.ms-storefront-searchbox,
-.ms-InlineSearch-Outline-Baseline,
-.ms-inlineSearch-searchImgSpanBase,
-.ms-srch-sb-searchLink,
-.ms-commandLink {
-    -webkit-box-sizing: content-box;
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-}*/
 /* General fix for ribbon, webpart, store, dialog */
 #suiteBar *,
 #s4-ribbonrow *,
@@ -482,6 +462,9 @@ ul.three-up > li:nth-child(3n+1) {
     box-sizing: content-box;
 }
 /* Exception for callout and tab in dialog */
+#SharingDialogCore .sp-peoplepicker-topLevel,
+#SharingDialogCore .ms-aclinv-message-input,
+.ms-aclinv-dialog #divGivePermissions select,
 .ms-dialog #s4-ribbonrow [role=tablist] [role=tab] .ms-cui-tt-span,
 .js-callout-mainElement .js-callout-location {
     -webkit-box-sizing: border-box;
@@ -495,6 +478,11 @@ ul.three-up > li:nth-child(3n+1) {
     text-decoration: none;
 }
 
+/* Prevent collision between .js-callout-usage and .js-callout-body */
+.js-callout-mainElement .js-callout-headerArea {
+    margin-bottom: 1px;
+}
+
 .ms-webpart-chrome-title .ms-webpart-titleText,
 .ms-dlgTitle #dialogTitleSpan {
     margin-bottom: 0;
@@ -503,6 +491,10 @@ ul.three-up > li:nth-child(3n+1) {
 .ms-dlgTitle .ms-dlgTitleText {
     line-height: 1.5em;
 }
+
+/*.ms-dialog #s4-workspace {
+    padding-bottom: 3em;
+}*/
 
 /* Add more space between old .ms-toolbar table cell */
 .ms-toolbar .ms-separator {
@@ -530,6 +522,9 @@ table.ms-picker-table td.ms-picker-dayselected {
 }
 
 /* Image rendition fixing */
-.ms-imagecrop img.ms-imagecrop-ghost {
+.ms-dialog .ms-imagecrop img.ms-imagecrop-ghost {
     width: 100%;
+}
+.ms-dialog .ms-imagecrop img.ms-imagecrop-ghost ~ div img {
+    max-width: 500px;
 }
