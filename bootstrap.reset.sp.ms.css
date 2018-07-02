@@ -1,15 +1,13 @@
 ﻿/* Source: https://code.msdn.microsoft.com/Sharepoint-Responsive-Page-08fe5c2f/sourcecode?fileId=143502&pathId=1710470633 */
-/*bootstrap resets for SharePoint*/ 
+﻿/*bootstrap resets for SharePoint*/ 
 *, *:before, *:after { 
     -webkit-box-sizing: content-box; /*border-box causes many issues with SP*/ 
     -moz-box-sizing: content-box;
-    -ms-box-sizing: content-box;
     box-sizing: content-box;
 } 
 * [class^="span"], * [class^="span"]:before, * [class^="span"]:after { 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
     box-sizing: border-box;
 } 
 img { 
@@ -351,8 +349,7 @@ ul.three-up > li:nth-child(3n+1) {
 .ms-dialog .ms-descriptiontext { 
     min-width: 150px; 
 } 
-/*.ms-dialog*/
- input[type="radio"], .ms-dialog input[type="checkbox"] { 
+/*.ms-dialog*/ input[type="radio"], .ms-dialog input[type="checkbox"] { 
     margin: 4px 4px 0; 
 } 
 .ms-dialog label { 
@@ -443,7 +440,7 @@ ul.three-up > li:nth-child(3n+1) {
         padding: 0 5px 0 5px; 
     }
     .searchbox { 
-        float: none;
+        /*float: none;*/ 
     }     
 }
 /* General fix for ribbon, webpart, store, dialog */
@@ -493,10 +490,6 @@ ul.three-up > li:nth-child(3n+1) {
     line-height: 1.5em;
 }
 
-/*.ms-dialog #s4-workspace {
-    padding-bottom: 3em;
-}*/
-
 /* Add more space between old .ms-toolbar table cell */
 .ms-toolbar .ms-separator {
     padding: 0 10px;
@@ -514,6 +507,7 @@ ul.three-up > li:nth-child(3n+1) {
     margin: 0;
 }
 
+
 /* Calendar fixing */
 .ms-quickLaunch table.ms-picker-table td.ms-picker-monthcenter,
 .ms-quickLaunch table.ms-picker-table td.ms-picker-monthcenterOn,
@@ -528,4 +522,17 @@ table.ms-picker-table td.ms-picker-dayselected {
 }
 .ms-dialog .ms-imagecrop img.ms-imagecrop-ghost ~ div img {
     max-width: 500px;
+}
+
+/* Content search WebPart textbox fixing */
+.cbs_tp_slot_textbox {
+    width: 227px !important;
+    border: 0 !important;
+    /*margin: 4px 2px;*/
+    margin: 1px 2px !important;
+}
+
+/* Fixed in query rule page */
+.ms-eqritemlistindent td {
+    padding-right: 15px;
 }
